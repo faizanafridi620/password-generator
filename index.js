@@ -44,7 +44,9 @@ btnCopy.addEventListener("click",()=>{
     passwordInput.setSelectionRange(0,100);
     
     document.execCommand("copy");
-    alert("Password copied to clipboard!");
+    if(passwordInput.value){        
+        alert("Password copied to clipboard!");
+    }
 })
 
 btnGenerate.addEventListener("click",generatePassword);
